@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #FBF9FA;
+  --bg2: #F3EEF1;
+  --ink: #221A20;
+  --muted: #6E6069;
+  --rule: #E2D9DE;
+  --accent: #4B2440;
+  --accent-ink: #FBF9FA;
+  --accent-soft: #EFE3EA;
+  --warn: #8A4B12;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #17121A;
+    --bg2: #1F1822;
+    --ink: #EEE6EA;
+    --muted: #A99DA5;
+    --rule: #33293A;
+    --accent: #CFA5C1;
+    --accent-ink: #17121A;
+    --accent-soft: #2A1F2C;
+    --warn: #E0A265;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #17121A;
+  --bg2: #1F1822;
+  --ink: #EEE6EA;
+  --muted: #A99DA5;
+  --rule: #33293A;
+  --accent: #CFA5C1;
+  --accent-ink: #17121A;
+  --accent-soft: #2A1F2C;
+  --warn: #E0A265;
+}
+
+:root[data-theme="light"] {
+  --bg: #FBF9FA;
+  --bg2: #F3EEF1;
+  --ink: #221A20;
+  --muted: #6E6069;
+  --rule: #E2D9DE;
+  --accent: #4B2440;
+  --accent-ink: #FBF9FA;
+  --accent-soft: #EFE3EA;
+  --warn: #8A4B12;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.num {
+  font-family: "IBM Plex Mono", Menlo, Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
